@@ -1,0 +1,450 @@
+<html>
+  <head>
+    <title>Gegnerdb Mod by BlueTeck - ReadMe</title>
+    <style>
+       <!--
+        html,body {
+          background-color:#020202;
+        }
+
+        a:link, a:visited {
+          color: #444444;
+          text-decoration:none;
+          font-weight:bold;
+        }
+
+        a:active, a:hover {
+          color: #000000;
+        }
+
+        td.contentHead {
+          width: 100%;
+          margin:10px 0 0 7px;
+          padding:0;
+          text-align:left;
+          font-size:20px;
+          color:#333;
+          border-bottom:1px dotted #333;
+          font-weight:normal;
+        }
+
+        td.content {
+          font-size:13px;
+          color:#333;
+          margin:9px 0 8px 9px;
+          padding:0;
+        }
+								
+								p.codesearch,p.codepast {
+          border:1px solid #DDD;
+          background-color:#F2F2F2;
+          width: 750px;
+          padding:5px 5px;
+          font-family:"Courier New", Courier, monospace;
+          font-size:10px;         
+          margin: 0px;  
+        }
+
+        p.codepast {
+          border:1px solid #DDD;
+          background-color:#c8f7b5;
+        }        
+        
+        textarea {
+          width: 750px;
+          overflow: auto;          
+        } 
+       -->
+    </style> 
+  </head>
+
+  <body style="text-align:center">
+    <table width="800" style="border: 2px solid #ccc;" align="center" bgcolor="white" cellspacing="10" cellpadding="0">
+
+<!--############################################################################-->
+<!--################################   START   #################################-->
+<!--############################################################################-->
+      <tr>
+        <td class="contentHead">Clanauswahlliste Mod by <a href="http://www.modsbar.de/?ref=ef4b56d946bdb5cc77d790da648b3004">BlueTeck</a> - ReadMe</td>
+      </tr>
+      <tr>
+        <td class="content"><p>Mit diesem Mod, m&uuml;ssen Clandaten bei wiederholtem War (zum Beispiel in Ligen) nicht immer wieder eingegeben werden.</p>
+        	<p> Im Admin Men&uuml; ist es jetzt m&ouml;glich einen/den Clan anzulegen. Beim erstellen oder bearbeiten eines Clanwars ist die Clanauswahl dann per Dropdown-Box auszuw&auml;hlen. Die festen Clandaten sind das Clank&uuml;rzel, Clanname, Website, Land und Logo.</p>
+        	<p>Au&szlig;erdem gibt es eine &Uuml;bersicht, auf der alle Gegnerclans angezeigt werden. Bei Aufruf einzelner Clans, werden die Clandetails angezeigt, sowie alle Spiele die der Gegner gegen euch gespielt hat.</p>
+        	<p>Am besten guckt ich euch die Screenshots an, oder besucht die Demoseite.</p>
+        <p>Hierf&uuml;r werden einige neuen Dateien auf euren Website gespielt und einige modifiziert, bzw. &uuml;berschrieben. Hierzu findet sich weiter unten ein Dateiverzeichnis.</p>
+        <p>Bei Problemen, Fehlern, Anregungen oder Fragen, wendet euch gerne an mich.</p></td>
+      </tr>
+
+<!--############################################################################-->
+<!--####################   HAFTUNGSAUSSCHLUSS & COPYRIGHT   ####################-->
+<!--############################################################################-->
+     <tr>
+        <td class="contentHead">Copyright & Haftungsausschluss</td>
+      </tr>
+      <tr>
+        <td class="content">          Wir &uuml;bernehmen keinerlei Verantwortung, f&uuml;r Sch&auml;den die durch das einbinden der Mod/des Addons entstehen. Das einbinden und
+          nutzen erfolgt demnach auf eigene Gefahr.<br>
+          <br>
+          Vor den einbinden der Mod/des Addons sollte eine Datenbanksicherung durchgef&uuml;hrt werden. Des Weiteren empfehlen wir,
+          von allen Dateien welche ge&auml;ndert werden m&uuml;ssen (unter „Ben&ouml;tigte Dateien“ aufgelistet), ebenfalls eine Sicherheitskopie anzufertigen.
+        </td>
+      </tr>
+
+<!--############################################################################-->
+<!--##########################   BENÖTIGTE  DATEIEN   ##########################-->
+<!--############################################################################-->
+      <tr>
+        <td class="contentHead">Ben&ouml;tigte Dateien</td>
+      </tr>
+      <tr>
+        <td class="content">
+          Folgende Dateien werden f&uuml;r dieses Addon modifiziert(&uuml;berschrieben):<br>
+          <ul>
+            <li><a href="#adminmenucw">admin/menu/cw.php</a></li>
+            <li><a href="#clanwarsindex">clanwars/index.php</a></li>
+         
+            <li><a href="#kalender">inc/menu-functions/kalender.php</a></li>
+            <li><a href="#lwars">inc/menu-functions/l_wars.php</a></li>
+            <li><a href="#nwars">inc/menu-functions/n_wars.php</a></li>
+            <li><a href="#topmatch">inc/menu-functions/top_match.php</a></li>
+            <li><a href="#kalenderindex">kalender/index.php</a></li>
+            <li><a href="#userindex">user/index.php</a></li>
+            <li><a href="#formcw">inc/_templates_/**Template**/admin/form_cw.html</a></li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td class="content">
+          Folgende Dateien sind komplett neu:<br>
+          <ul>
+            <li>_install/install.php</li>
+            <li>clans/index.php</li>
+            <li>admin/menu/cw_clans.php</li>
+            <li>admin/menu/cw_clans.gif</li>
+            <li>inc/_templates_/**Template**/clans/list.html</li>
+            <li>inc/_templates_/**Template**/clans/list_row.html</li>
+            <li>inc/_templates_/**Template**/clans/show.html</li>
+            <li>inc/_templates_/**Template**/clans/wars.html</li>
+            <li>inc/_templates_/**Template**/admin/clans.html</li>
+            <li>inc/_templates_/**Template**/admin/clans_show.html</li>
+            <li>inc/_templates_/**Template**/admin/form_clans.html</li>
+            <li>inc/additional-languages/deutsch/Clans_by_BlueTeck.php</li>
+        </ul></td>
+      </tr>
+
+<!--############################################################################-->
+<!--#############################   INSTALLATION   #############################-->
+<!--############################################################################-->
+      <tr>
+        <td class="contentHead">Installation</td>
+      </tr>     
+      <tr>
+        <td class="content">
+          Entpackt das Archiv in einen beliebigen Ordner. Wenn Ihr es entpackt habt, findet Ihr in den entpackten Ordner 3 weitere Ordner
+          (_install, PHP und Template).<br>
+          <br>
+          
+          Damit es zu keinen Fehler kommt, m&uuml;ssen zuerst die Tabellen in der Datenbank angelegt werden. Hierf&uuml;r haben wir einen kleinen
+          Installer geschrieben, welchen sich im Ordner _install befindet. Ladet diesen Ordner in das Hauptverzeichnis eures deV!L'z Clanportals.<br>
+          <br>
+          
+          <b>Ruft anschliesend eure Seite auf</b> und <b>f&uuml;gt hinter die Adresse folgendes ein</b>:<br>
+          <br>
+          
+          <p class="codepast">/_install/install.php</p>
+          <p><br>
+          Wenn die Installation erfolgreich verlief <b>l&ouml;scht zur Sicherheit den Installer-Ordner</b> von euren Webspace.<br>
+          </p>
+          <p>Falls ihr andere Mods installiert habt, die sich in den Dateien mit diesem Mod &uuml;berschreiben, m&uuml;sst ihr alle Dateien manuell &auml;ndern. In diesem Fall empfehle ich die Zusatzleistung bei mir zu kaufen, dann habt ihr weniger Arbeit.</p>
+          <p><br>
+          
+          Nun m&uuml;ssen die restlichen Dateien hochgeladen werden. Den <b>Inhalt aus dem "PHP Ordner" </b> m&uuml;sst Ihr in
+          das <b>Hauptverzeichnis des deV!L'z Clanportal</b> hochladen. Das Hauptverzeichnis ist das
+          oberste Verzeichnis des deV!L'z Clanportals in welchen sich unter anderen die Dateien __readme.html, antispam.php, index.php,
+          popup.html und die ganzen Ordner der einzelnen Bereiche befinden.<br>
+          <br>
+          
+          Den <b>Inhalt des "Templates" Ordner</b> m&uuml;sst Ihr in das <b>Verzeichnis eures Templates</b> hochladen
+          (Pfad: inc/_templates_/TEMPLATE).<br>
+          </p>
+          <p>In eure Navigation in eurem Template m&uuml;sst/k&ouml;nnt ihr nun noch folgende Seite verlinken</p>
+          <p class="codepast">../clans/index.php</p>
+          <p>Also http://deine-clanseite.de/clans/</p>
+          <p><br>
+       	  Nun ist der Mod auf eurem Webspace funktionsf&auml;hig, und alle Clans aus bisherigen Clanwars sollten in die Datenbank &uuml;bertragen sein.</p></td>
+      </tr>
+	  <tr>
+        <td class="contentHead">Manuelle Anpassung</td>
+      </tr>
+	  	  <tr>
+        <td class="contentHead"><a name="adminmenucw"></a>admin/menu/cw.php</td>
+      </tr>    
+      <tr>
+        <td class="content">Such nach (~Zeile 18-24):<br>
+          <br>
+          
+          <p class="codesearch"> while($get = _fetch($qry))<br>
+{<br>
+$squads .= show(_cw_add_select_field_squads, array(&quot;name&quot; =&gt; re($get['name']),<br>
+&quot;game&quot; =&gt; re($get['game']),<br>
+&quot;id&quot; =&gt; $get['id'],<br>
+&quot;icon&quot; =&gt; $get['icon']));<br>
+}</p>
+          <p>Und
+          f&uuml;ge darunter folgendes ein:</p>
+		  <p class="codepast">//Clans Mod <br>
+$qry = db(&quot;SELECT * FROM &quot;.$sql_prefix.&quot;clans ORDER BY gegner ASC&quot;);<br>
+while($clansqry = _fetch($qry))<br>
+{<br>
+$clans .= show(_cw_add_select_field_clans, array(&quot;gegner&quot; =&gt; re($clansqry['gegner']),<br>
+&quot;clantag&quot; =&gt; re($clansqry['clantag']),<br>
+&quot;id&quot; =&gt; $clansqry['id']));<br>
+}</p><p>Ein paar Zeilen darunter hinter</p><p class="codesearch">$show = show($dir."/form_cw", array(</p>
+<p>f&uuml;gst du folgendes ein:</p><p class="codepast">&quot;clans&quot; =&gt; $clans,</p>
+<p>Danach suchst du folgendes (~Teile 103-113):</p>
+		  <p class="codesearch">while($gets = _fetch($qrym))<br>
+		  	{<br>
+		  	if($get['squad_id'] == $gets['id']) $sel = &quot;selected=\&quot;selected\&quot;&quot;;<br>
+		  	else $sel = &quot;&quot;;<br>
+		   $squads .= show(_cw_edit_select_field_squads, array(&quot;id&quot; =&gt; $gets['id'],<br>
+	&quot;name&quot; =&gt; re($gets['name']),<br>
+	&quot;game&quot; =&gt; re($gets['game']),<br>
+	&quot;sel&quot; =&gt; $sel,<br>
+	&quot;icon&quot; =&gt; $gets['icon']));<br>
+		  	}</p><p>Und f&uuml;gest danach folgendes ein</p>
+		  	<p class="codepast">//Clans Mod<br>
+		  		$qryc = db(&quot;SELECT * FROM &quot;.$sql_prefix.&quot;clans ORDER BY gegner&quot;);<br>
+		  		while($clansqry = _fetch($qryc))<br>
+		  		{<br>
+		  		if($get['cid'] == $clansqry['id']) $sel = &quot;selected=\&quot;selected\&quot;&quot;;<br>
+		  		else $sel = &quot;&quot;;<br> $clans .= show(_cw_edit_select_field_clans, array(&quot;id&quot; =&gt; $clansqry['id'],<br>
+	&quot;gegner&quot; =&gt; re($clansqry['gegner']),<br>
+	&quot;clantag&quot; =&gt; re($clansqry['clantag']),<br>
+	&quot;sel&quot; =&gt; $sel));<br>
+		  		} </p><p>Und erneut ein paar Zeilen tiefer hinter</p><p class="codesearch">$show = show($dir.&quot;/form_cw&quot;, array(</p><p>f&uuml;gst du dies ein</p><p class="codepast">&quot;clans&quot; =&gt; $clans,</p><p>Und dann suchen wir nocheinmal nach:</p><P class="codesearch">$class = ($color % 2) ? &quot;contentMainSecond&quot; : &quot;contentMainFirst&quot;; $color++;</p>
+			<p>Und f&uuml;gen darunter folgendes hinzu:</p>
+				<p class="codepast">//Clans Mod<br>
+$clandetailssql = db(&quot;SELECT clantag, gegner FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$get['cid']);<br>
+$clans = _fetch($clandetailssql); </p><p>Und ein paar Zeilen darunter muss</p><p class="codesearch">&quot;cw&quot; =&gt; re($get['clantag']).&quot; - &quot;.re($get['gegner']),</p>
+<p>in folgendes abge&auml;ndert werden</p><p class="codepast">&quot;cw&quot; =&gt; re($clans['clantag']).&quot; - &quot;.re($clans['gegner']),</p>
+				
+				
+				Jetzt m&uuml;ssen noch die DB Daten angepasst werden, suche nach:
+				<p class="codesearch">INSERT INTO &quot;.$db['cw'].&quot;<br>
+SET</p>und f&uuml;ge dahinter dies ein
+<p class="codepast">`cid`     = '&quot;.((int)$_POST['cid']).&quot;',</p>
+und hinter
+<p class="codesearch">UPDATE &quot;.$db['cw'].&quot;<br>
+SET</p>
+kommt
+<p class="codepast">`cid`     = '&quot;.((int)$_POST['cid']).&quot;',</p>
+Und folgendes muss gelöscht werden
+<p class="codesearch">empty($_POST['gegner']) || empty($_POST['clantag'])</p>
+<p><br>
+          </p></td>
+      </tr>
+	    <tr>
+        <td class="contentHead"><a name="clanwarsindex"></a>clanwars/index.php</td>
+      </tr> 
+	  <tr><td class="content">
+	  Suche nach:
+	  <p class="codesearch">['gcountry']</p> Den ganzen Block, also $flagge und $gegner
+	  <p class="codesearch"> $flagge = flag($getm['gcountry']);<br>
+$gegner = show(_cw_details_gegner, array(&quot;gegner&quot; =&gt; re(cut($getm['clantag'].&quot; - &quot;.$getm['gegner'], $lcwgegner)),<br>
+&quot;url&quot; =&gt; '?action=details&amp;amp;id='.$getm['id']));</p>ersetzt du durch
+
+	  <p class="codepast">//Clans Mod<br>
+$clandetailssql = db(&quot;SELECT clantag, gegner, url, country FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$getm['cid']);<br>
+$clans = _fetch($clandetailssql);<br>
+<br>
+$flagge = flag($clans['country']);<br>
+$gegner = show(_cw_details_gegner, array(&quot;gegner&quot; =&gt; re(cut($clans['clantag'].&quot; - &quot;.$clans['gegner'], $lcwgegner)),<br>
+&quot;url&quot; =&gt; '../clans/?action=show&amp;amp;id='.$getm['id']));</p>
+<p>Dies ist 5 mal der Fall, die Zeilen sind ungef&auml;hr: 109, 264, 424, 618, 1078</p>
+
+Jetzt m&uuml;ssen noch die DB abfragen angepasst werden, suche daf&uuml;r nach
+<p class="codesearch">s1.gegner</p>
+in den Abfragen wo dies vorkommt, löscht du
+<p class="codesearch">s1.gegner,</p>
+<p class="codesearch">s1.clantag,</p>
+<p class="codesearch">s1.gcountry,</p>
+<p class="codesearch">s1.url,</p>f&uuml;gt stattdessen aber
+<p class="codepast">s1.cid,</p>hinzu.
+<p>
+Dann suche noch<p class="codesearch">$pagetitle = re($get['name']).' vs. '.re($get['gegner']).' - '.$pagetitle;</p>Und ersetzte es durch<p class="codepast">$pagetitle = re($get['name']).' vs. '.re($clans['gegner']).' - '.$pagetitle;</p></td></tr>
+
+<tr>
+        <td class="contentHead"><a name="kalender"></a>inc/menu-functions/kalender.php</td>
+      </tr> 
+	  <tr>
+	  	<td class="content">Folgendes
+	  		<p class="codesearch"> 
+	  			$qry = db(&quot;SELECT datum,gegner FROM &quot;.$db['cw'].&quot;<br>
+	  			WHERE DATE_FORMAT(FROM_UNIXTIME(datum), '%d.%m.%Y') = '&quot;.cal($i).&quot;.&quot;.$monat.&quot;.&quot;.$jahr.&quot;'&quot;);<br>
+	  			if(_rows($qry))<br>
+	  			{<br>
+	  			while($get = _fetch($qry)) $infoCW .= '&lt;img src=../inc/images/cw.gif class=icon alt= /&gt; '.jsconvert(_kal_cw.re($get['gegner']));
+				 $info = ' onmouseover=&quot;DZCP.showInfo(\'&lt;tr&gt;&lt;td&gt;'.$infoCW.'&lt;/td&gt;&lt;/tr&gt;\')&quot; onmouseout=&quot;DZCP.hideInfo()&quot;';<br>
+	  			$cws = '&lt;a href=&quot;../clanwars/?action=kalender&amp;amp;time='.$datum.'&quot;'.$info.'&gt;&lt;img src=&quot;../inc/images/cw.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;';<br>
+	  			} else {<br>
+	  			$cws = &quot;&quot;;<br>
+	  			}</p>
+	  		
+	  		
+	  		muss durch folgendes ersetzt werden
+	    	<p class="codepast"> <br>
+	    		$qry = db(&quot;SELECT datum,cid FROM &quot;.$db['cw'].&quot;<br>
+	    		WHERE DATE_FORMAT(FROM_UNIXTIME(datum), '%d.%m.%Y') = '&quot;.cal($i).&quot;.&quot;.$monat.&quot;.&quot;.$jahr.&quot;'&quot;);<br>
+	    		if(_rows($qry))<br>
+	    		{<br>
+	    		while($get = _fetch($qry)) <br>
+	    		//Clans Mod <br>
+	    		$clandetailssql = db(&quot;SELECT gegner FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$get['cid']);<br>
+	    		$clans = _fetch($clandetailssql);<br>
+	<br>
+	    		$infoCW .= '&lt;img src=../inc/images/cw.gif class=icon alt= /&gt; '.jsconvert(_kal_cw.re($clans['gegner']));
+				 $info = ' onmouseover=&quot;DZCP.showInfo(\'&lt;tr&gt;&lt;td&gt;'.$infoCW.'&lt;/td&gt;&lt;/tr&gt;\')&quot; onmouseout=&quot;DZCP.hideInfo()&quot;';<br>
+	    		$cws = '&lt;a href=&quot;../clanwars/?action=kalender&amp;amp;time='.$datum.'&quot;'.$info.'&gt;&lt;img src=&quot;../inc/images/cw.gif&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;';<br>
+	    		} else {<br>
+	    		$cws = &quot;&quot;;<br>
+	    		}<br>
+	    </p>	    	</td></tr>
+	  <tr>
+        <td class="contentHead"><a name="lwars"></a>inc/menu-functions/l_wars.php</td>
+      </tr> 
+	  <tr>
+	  	<td class="content">
+	  Folgende Zeile 
+	  	<p class="codesearch">global</p>
+	  muss in dieses ge&auml;ndert werden
+	  <p class="codepast">global $sql_prefix,</p>
+	  Dann muss in der Db Abfrage dies gelöscht werden
+	  <p class="codesearch">s1.gegner,</p>
+<p class="codesearch">s1.clantag,</p>
+Und dafür dies hinzugef&uuml;gt werden<p class="codepast">s1.cid,</p>
+Und vor<p class="codesearch">if($allowHover == 1 || $allowHover == 2)</p>
+muss dies
+	  eingef&uuml;gt werden<p class="codepast">$clandetailssql = db(&quot;SELECT clantag, gegner FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$get['cid']);<br>
+$clans = _fetch($clandetailssql);</p>Und dann muss <p class="codesearch">$get['gegner']</p>zu dem hier werden<p class="codepast">$clans['gegner']</p>
+Und dann muss <p class="codesearch">$get['clantag']</p>
+zu dem hier werden<p class="codepast">$clans['clantag']</p>
+</td></tr>
+	  <tr>
+        <td class="contentHead"><a name="nwars"></a>inc/menu-functions/n_wars.php</td>
+      </tr> 
+	  <tr><td class="content">
+	  Folgende Zeile 
+	  	<p class="codesearch">global</p>
+	  muss in dieses ge&auml;ndert werden
+	  <p class="codepast">global $sql_prefix,</p>
+	  Dann muss in der Db Abfrage dies gelöscht werden
+	  <p class="codesearch">s1.gegner,</p>
+<p class="codesearch">s1.clantag,</p>
+Und dafür dies hinzugef&uuml;gt werden<p class="codepast">s1.cid,</p>
+Und vor<p class="codesearch">if($allowHover == 1 || $allowHover == 2)</p>
+muss dies
+	  eingef&uuml;gt werden<p class="codepast">$clandetailssql = db(&quot;SELECT clantag, gegner FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$get['cid']);<br>
+$clans = _fetch($clandetailssql);</p>Und dann muss <p class="codesearch">$get['gegner']</p>zu dem hier werden<p class="codepast">$clans['gegner']</p>
+Und dann muss <p class="codesearch">$get['clantag']</p>
+zu dem hier werden<p class="codepast">$clans['clantag']</p>	  
+	  </td></tr>
+	  <tr>
+        <td class="contentHead"><a name="topmatch"></a>inc/menu-functions/top_match.php</td>
+      </tr> 
+	  <tr><td class="content">
+	  Folgende Zeile 
+	  	<p class="codesearch">global</p>
+	  muss in dieses ge&auml;ndert werden
+	  <p class="codepast">global $sql_prefix,</p>
+	  Dann muss in der Db Abfrage dies gelöscht werden
+	  <p class="codesearch">s1.gegner,</p>
+<p class="codesearch">s1.clantag,</p>
+Und dafür dies hinzugef&uuml;gt werden<p class="codepast">s1.cid,</p>
+Und vor<p class="codesearch"> $squad = '_defaultlogo.jpg'; $gegner = '_defaultlogo.jpg';</p>
+muss dies
+	  eingef&uuml;gt werden<p class="codepast">$clandetailssql = db(&quot;SELECT clantag, gegner FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$get['cid']);<br>
+$clans = _fetch($clandetailssql);</p>
+Und dann muss <p class="codesearch">if(file_exists(basePath.'/inc/images/clanwars/'.$get['id'].'_logo.'.$end)) $gegner = $get['id'].'_logo.'.$end;</p>
+zu dem hier werden<p class="codepast">if(file_exists(basePath.'/inc/images/clanwars/'.$get['cid'].'_logo.'.$end)) $gegner = $get['cid'].'_logo.'.$end;</p>
+Und dann muss <p class="codesearch">$get['gegner']</p>
+zu dem hier werden<p class="codepast">$clans['gegner']</p>
+Und dann muss <p class="codesearch">$get['clantag']</p>
+zu dem hier werden<p class="codepast">$clans['clantag']</p>	  
+	  </td></tr>
+	  <tr>
+        <td class="contentHead"><a name="kalenderindex"></a>kalender/index.php</td>
+      </tr> 
+	  <tr><td class="content">
+	  Folgende Zeile 
+	  	<p class="codesearch">global</p>
+	  muss in dieses ge&auml;ndert werden
+	  <p class="codepast">global $sql_prefix,</p>
+	  Und dann muss das hier
+	  <p class="codesearch">$cws = &quot;set&quot;;<br>
+$titlecw .= '&lt;tr&gt;&lt;td&gt;&lt;img src=../inc/images/cw.gif class=icon alt= /&gt; '.jsconvert(_kal_cw.re($get['gegner'])).'&lt;/td&gt;&lt;/tr&gt;';</p>muss in der ge&auml;ndert werden<p class="codepast"> $clandetailssql = db(&quot;SELECT gegner FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$get['cid']);<br>
+$clans = _fetch($clandetailssql); <br>
+$cws = &quot;set&quot;;<br>
+$titlecw .= '&lt;tr&gt;&lt;td&gt;&lt;img src=../inc/images/cw.gif class=icon alt= /&gt; '.jsconvert(_kal_cw.re($clans['gegner'])).'&lt;/td&gt;&lt;/tr&gt;';
+	  </td></tr>
+	  <tr>
+        <td class="contentHead"><a name="userindex"></a>user/index.php</td>
+      </tr> 
+	  <tr><td class="content">
+	  Suche nach
+	  <p class="codesearch">$cws .= show(_user_new_cw</p>und f&uuml;ge davor dies ein<p class="codepast">$clandetailssql = db(&quot;SELECT clantag FROM &quot;.$sql_prefix.&quot;clans WHERE id LIKE &quot;.$getcw['cid']);<br>
+$clans = _fetch($clandetailssql);<p>Und dann &auml;ndere
+<p class="codesearch">&quot;gegner&quot; =&gt; re($getcw['clantag'])));</p>in<p class="codepast">&quot;gegner&quot; =&gt; re($clans['clantag'])));</p></td></tr>
+	  <tr>
+        <td class="contentHead"><a name="formcw"></a>inc/_templates_/**Template**/admin/form_cw.html</td>
+      </tr> 
+	  <tr>
+	  	<td class="content">
+	  Ersetzte dies<p class="codesearch">&lt;tr&gt;<br>
+&lt;td class=&quot;contentMainTop&quot;&gt;&lt;span class=&quot;fontBold&quot;&gt;[clantag]:&lt;/span&gt;&lt;/td&gt; <br>
+&lt;td class=&quot;contentMainFirst&quot; align=&quot;center&quot;&gt;<br>
+&lt;input type=&quot;text&quot; name=&quot;clantag&quot; value=&quot;[cw_clantag]&quot; class=&quot;inputField_dis&quot;<br>
+onfocus=&quot;this.className='inputField_en';&quot; <br>
+onblur=&quot;this.className='inputField_dis';&quot;&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td class=&quot;contentMainTop&quot;&gt;&lt;span class=&quot;fontBold&quot;&gt;[gegner]:&lt;/span&gt;&lt;/td&gt; <br>
+&lt;td class=&quot;contentMainFirst&quot; align=&quot;center&quot;&gt;<br>
+&lt;input type=&quot;text&quot; name=&quot;gegner&quot; value=&quot;[cw_gegner]&quot; class=&quot;inputField_dis&quot;<br>
+onfocus=&quot;this.className='inputField_en';&quot; <br>
+onblur=&quot;this.className='inputField_dis';&quot;&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td class=&quot;contentMainTop&quot;&gt;&lt;span class=&quot;fontBold&quot;&gt;[country]:&lt;/span&gt;&lt;/td&gt;<br>
+&lt;td class=&quot;contentMainFirst&quot; align=&quot;center&quot;&gt;<br>
+[countrys]<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td class=&quot;contentMainTop&quot;&gt;&lt;span class=&quot;fontBold&quot;&gt;[url]:&lt;/span&gt;&lt;/td&gt; <br>
+&lt;td class=&quot;contentMainFirst&quot; align=&quot;center&quot;&gt;<br>
+&lt;input type=&quot;text&quot; name=&quot;url&quot; value=&quot;[cw_url]&quot; class=&quot;inputField_dis&quot;<br>
+onfocus=&quot;this.className='inputField_en';&quot; <br>
+onblur=&quot;this.className='inputField_dis';&quot;&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td class=&quot;contentMainTop&quot;&gt;&lt;span class=&quot;fontBold&quot;&gt;[logo]:&lt;/span&gt;&lt;br /&gt;&lt;small&gt;&lt;i&gt;100px x 100px&lt;/i&gt;&lt;/small&gt;&lt;/td&gt; <br>
+&lt;td class=&quot;contentMainFirst&quot; align=&quot;center&quot;&gt;<br>
+&lt;input type=&quot;file&quot; name=&quot;logo&quot; /&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;</p>durch dies hier<p class="codepast"> &lt;tr&gt;<br>
+&lt;td class=&quot;contentMainTop&quot;&gt;&lt;span class=&quot;fontBold&quot;&gt;[gegner]:&lt;/span&gt;&lt;/td&gt;<br>
+&lt;td class=&quot;contentMainFirst&quot; align=&quot;center&quot;&gt;<br>
+&lt;select id=&quot;cid&quot; name=&quot;cid&quot; class=&quot;dropdown&quot;&gt;<br>
+[clans]<br>
+&lt;/select&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;</p></td></tr>
+      <tr>
+        <td height="10"></td>
+      </tr>
+    </table>
+  </body>
+</html>

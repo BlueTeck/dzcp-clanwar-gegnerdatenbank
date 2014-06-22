@@ -1,0 +1,62 @@
+</table>
+<table class="mainContent" cellspacing="0">
+<tr>
+  <td>
+    
+    <form id="editorForm" name="editorForm" enctype="multipart/form-data" action="?admin=cw_clans&amp;do=[do]" method="post" onsubmit="return(DZCP.submitButton())">
+    <table class="hperc" cellspacing="1">
+      <tr>
+        <td class="contentHead" align="center" colspan="2"><span class="fontBold">[head]</span></td>
+      </tr>
+      [error]
+      <tr>
+        <td class="contentMainTop"><span class="fontBold">[clantag]:</span></td>
+        <td class="contentMainFirst" align="center">
+          <input type="text" name="clantag" value="[e_clantag]" class="inputField_dis"
+          onfocus="this.className='inputField_en';"
+          onblur="this.className='inputField_dis';" />
+        </td>
+      </tr>
+            <tr>
+        <td class="contentMainTop"><span class="fontBold">[gegner]:</span></td>
+        <td class="contentMainFirst" align="center">
+          <input type="text" name="gegner" value="[e_gegner]" class="inputField_dis"
+          onfocus="this.className='inputField_en';"
+          onblur="this.className='inputField_dis';" />
+        </td>
+      </tr>
+            <tr>
+        <td class="contentMainTop"><span class="fontBold">[logo]:</span><br /><small><i>100px x 100px</i></small></td> 
+        <td class="contentMainFirst" align="center">
+        
+          <input type="file" name="logo" />
+        </td>
+      </tr>
+      <tr>
+        <td class="contentMainTop"><span class="fontBold">[country]:</span></td>
+        <td class="contentMainFirst" align="center">
+      		[countrys]
+        </td>
+      </tr>
+<tr>
+        <td class="contentMainTop"><span class="fontBold">[url]:</span></td> 
+        <td class="contentMainFirst" align="center">
+          <input type="text" name="url" value="[e_url]" class="inputField_dis"
+          onfocus="this.className='inputField_en';" 
+          onblur="this.className='inputField_dis';">
+        </td>
+      </tr>
+      <tr>
+        <td class="contentBottom" colspan="2"><input id="contentSubmit" type="submit" value="[what]" class="submit" /> </td>
+      </tr>
+    </table>
+    </form>
+  </td>
+</tr>
+</table>
+<table class="hperc" cellspacing="0">
+<tr>
+  <td>
+    <div id="previewDIV"></div>
+  </td>
+</tr>
