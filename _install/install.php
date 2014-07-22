@@ -2,6 +2,7 @@
 ## OUTPUT BUFFER START ##
 include("../inc/buffer.php");
 ## INCLUDES ##
+include(basePath."/inc/debugger.php");
 include(basePath."/inc/config.php");
 include(basePath."/inc/bbcode.php");
 ## SETTINGS ##
@@ -12,7 +13,7 @@ $title = $pagetitle." - ".$where."";
 ## INSTALLER ##
 if(isset($_POST['submit'])) {	
 
-// alte Tabellen/Spalten löschen
+// alte Tabellen/Spalten lÃ¶schen
 		db("DROP TABLE IF EXISTS ".$sql_prefix."clans");
 				
 		
@@ -28,7 +29,7 @@ if(isset($_POST['submit'])) {
 db("ALTER TABLE ".$sql_prefix."clanwars ADD `cid` int(5) NOT NULL default '0'");							
 
 $qry = db("SELECT id,clantag,gegner,url,gcountry FROM ".$sql_prefix."clanwars ORDER BY id");
-        while($get = mysql_fetch_array($qry))
+        while($get = _fetch($qry))
         {
 		db("INSERT INTO ".$sql_prefix."clans (id,clantag,gegner,url,country) VALUES 
 		('".$get["id"]."',
